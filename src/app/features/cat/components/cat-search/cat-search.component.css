@@ -1,0 +1,25 @@
+ form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: #e0f7fa;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

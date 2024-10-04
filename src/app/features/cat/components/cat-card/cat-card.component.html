@@ -1,1 +1,7 @@
-<p>cat-card works!</p>
+<mat-card>
+  <img mat-card-image [src]="cat.url" alt="Cat" />
+  <mat-card-content>
+    <p *ngIf="cat.breeds && cat.breeds.length > 0" class="cat-breed">{{ cat.breeds[0].name }}</p>
+    <p *ngIf="!cat.breeds || cat.breeds.length === 0" class="cat-breed">Без породи</p>
+  </mat-card-content>
+</mat-card>

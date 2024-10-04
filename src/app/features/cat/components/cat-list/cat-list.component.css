@@ -1,0 +1,23 @@
+p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00796b;
+}
+
+.no-cats-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00796b;
+}
+
+.cat-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

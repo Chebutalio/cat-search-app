@@ -1,0 +1,15 @@
+mat-card {
+  width: 300px;
+  margin: 10px;
+}
+
+img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.cat-breed {
+  color: #00796b;
+  text-align: center;
+  margin-top: 10px;
+}

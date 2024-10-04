@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { CatCardComponent } from '../cat-card/cat-card.component';
+import { Cat } from "../../../../interfaces/cat.model";
 
 @Component({
   selector: 'app-cat-list',
   standalone: true,
-  imports: [],
-  templateUrl: './cat-list.component.html',
-  styleUrl: './cat-list.component.css'
+  imports: [CommonModule, CatCardComponent],
+  templateUrl: 'cat-list.component.html',
+  styleUrl: 'cat-list.component.scss',
 })
 export class CatListComponent {
-
+  @Input() cats: Cat[] = [];
 }

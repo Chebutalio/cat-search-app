@@ -1,1 +1,24 @@
-<p>cat-search works!</p>
+<div class="app-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Оберіть породу</mat-label>
+      <mat-select formControlName="breed">
+        <mat-option
+          *ngFor="let breed of breeds$ | async"
+          [value]="breed.id"
+        >
+          {{ breed.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Кількість результатів</mat-label>
+      <input matInput type="number" formControlName="limit" min="1" max="30">
+    </mat-form-field>
+
+    <button mat-raised-button type="submit">Знайти котів</button>
+  </form>
+
+  <app-cat-list *ngIf="cats$ | async as catsList" [cats]="catsList"></app-cat-list>
+</div>
